@@ -1,0 +1,1446 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta
+    name="description"
+    content="Andyartis: un estudio digital donde tus ideas se convierten en arte."
+>
+
+<title>Andyartis | Estudio Digital de Arte</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+</head><body><!-- ================================= -->
+<!-- ENCABEZADO PRINCIPAL -->
+<!-- Se muestra después de iniciar sesión -->
+<!-- ================================= -->
+
+<header
+    class="encabezado"
+    id="encabezadoPrincipal"
+    hidden
+>
+
+    <div class="logo">
+
+        <img
+            src="img/logo.jpg"
+            alt="Logotipo de Andyartis"
+        >
+
+        <h1>Andyartis</h1>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- MENÚ PARA USUARIOS NORMALES -->
+    <!-- ================================= -->
+
+    <nav
+        class="navegacion"
+        id="menuUsuario"
+    >
+
+        <button
+            type="button"
+            data-page="inicio"
+        >
+            Inicio
+        </button>
+
+        <button
+            type="button"
+            data-page="categorias"
+        >
+            Categorías
+        </button>
+
+        <button
+            type="button"
+            data-page="perfil"
+        >
+            Mi perfil
+        </button>
+
+    </nav>
+
+
+    <!-- ================================= -->
+    <!-- MENÚ PRIVADO DE LA ARTISTA -->
+    <!-- ================================= -->
+
+    <nav
+        class="navegacion menu-artista"
+        id="menuArtista"
+        hidden
+    >
+
+        <button
+            type="button"
+            data-page="inicio"
+        >
+            Inicio
+        </button>
+
+        <button
+            type="button"
+            data-page="categorias"
+        >
+            Categorías
+        </button>
+
+        <button
+            type="button"
+            data-page="perfil"
+        >
+            Mi perfil
+        </button>
+
+        <button
+            type="button"
+            data-page="admin"
+        >
+            Panel de artista
+        </button>
+
+        <button
+            type="button"
+            data-page="notificaciones"
+        >
+            Notificaciones
+        </button>
+
+    </nav>
+
+
+    <!-- ================================= -->
+    <!-- ACCIONES GENERALES -->
+    <!-- ================================= -->
+
+    <div class="acciones-encabezado">
+
+        <button
+            type="button"
+            id="btnTema"
+            aria-label="Cambiar tema"
+        >
+            Cambiar tema
+        </button>
+
+        <button
+            type="button"
+            id="btnCerrarSesion"
+        >
+            Cerrar sesión
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================================= -->
+<!-- CONTENIDO PRINCIPAL -->
+<!-- ================================= -->
+
+<main>
+
+
+    <!-- ================================= -->
+    <!-- 1. BIENVENIDA E INICIO DE SESIÓN -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaBienvenida"
+        class="pantalla"
+    >
+
+        <div class="bienvenida-contenido">
+
+            <img
+                src="img/logo.jpg"
+                alt="Andyartis"
+                class="logo-bienvenida"
+            >
+
+            <p class="subtitulo">
+                TU ESPACIO CREATIVO DIGITAL
+            </p>
+
+            <h2>
+                ¡Bienvenido a Andyartis!
+            </h2>
+
+            <p>
+                Un lugar donde tus ideas, personajes y sueños
+                se convierten en arte digital.
+            </p>
+
+
+            <!-- FORMULARIO DE INICIO DE SESIÓN -->
+
+            <div class="formulario-contenedor">
+
+                <h3>Iniciar sesión</h3>
+
+                <form id="formLogin">
+
+                    <label for="loginCorreo">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginCorreo"
+                        placeholder="Ingresa tu correo"
+                        autocomplete="email"
+                        required
+                    >
+
+
+                    <label for="loginPassword">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Ingresa tu contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+
+
+                    <button type="submit">
+                        Iniciar sesión
+                    </button>
+
+                </form>
+
+
+                <button
+                    type="button"
+                    data-page="recuperar"
+                >
+                    ¿Olvidaste tu contraseña?
+                </button>
+
+
+                <p>
+                    ¿Todavía no tienes una cuenta?
+                </p>
+
+
+                <button
+                    type="button"
+                    data-page="registro"
+                >
+                    Crear una cuenta
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 2. REGISTRO DE CUENTA -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaRegistro"
+        class="pantalla"
+        hidden
+    >
+
+        <div class="formulario-contenedor">
+
+            <h2>Crear cuenta</h2>
+
+            <p>
+                Únete a nuestra comunidad creativa.
+            </p>
+
+
+            <form id="formRegistro">
+
+                <label for="registroNombre">
+                    Nombre
+                </label>
+
+                <input
+                    type="text"
+                    id="registroNombre"
+                    placeholder="Tu nombre"
+                    autocomplete="given-name"
+                    required
+                >
+
+
+                <label for="registroApellidos">
+                    Apellidos
+                </label>
+
+                <input
+                    type="text"
+                    id="registroApellidos"
+                    placeholder="Tus apellidos"
+                    autocomplete="family-name"
+                    required
+                >
+
+
+                <label for="registroCorreo">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="registroCorreo"
+                    placeholder="Tu correo electrónico"
+                    autocomplete="email"
+                    required
+                >
+
+
+                <label for="registroPassword">
+                    Contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="registroPassword"
+                    placeholder="Crea una contraseña"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+
+                <label for="registroConfirmar">
+                    Confirmar contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="registroConfirmar"
+                    placeholder="Repite tu contraseña"
+                    autocomplete="new-password"
+                    required
+                >
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="aceptarTerminos"
+                        required
+                    >
+
+                    Acepto las condiciones de uso y privacidad.
+
+                </label>
+
+
+                <button type="submit">
+                    Registrarme
+                </button>
+
+            </form>
+
+
+            <p>
+                ¿Ya tienes una cuenta?
+            </p>
+
+
+            <button
+                type="button"
+                data-page="bienvenida"
+            >
+                Volver a iniciar sesión
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 3. CREACIÓN Y EDICIÓN DEL PERFIL -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaPerfil"
+        class="pantalla"
+        hidden
+    >
+
+        <div class="formulario-contenedor">
+
+            <h2>Mi perfil artístico</h2>
+
+            <p>
+                Personaliza tu información personal.
+            </p>
+
+
+            <form id="formPerfil">
+
+                <div class="foto-perfil">
+
+                    <img
+                        src="img/perfil-predeterminado.jpg"
+                        alt="Foto de perfil"
+                        id="vistaFotoPerfil"
+                    >
+
+
+                    <label for="fotoPerfil">
+                        Seleccionar fotografía
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="fotoPerfil"
+                        accept="image/png,image/jpeg,image/webp"
+                    >
+
+                </div>
+
+
+                <label for="perfilNombre">
+                    Nombre
+                </label>
+
+                <input
+                    type="text"
+                    id="perfilNombre"
+                    placeholder="Tu nombre"
+                    required
+                >
+
+
+                <label for="perfilApellidos">
+                    Apellidos
+                </label>
+
+                <input
+                    type="text"
+                    id="perfilApellidos"
+                    placeholder="Tus apellidos"
+                    required
+                >
+
+
+                <label for="perfilPais">
+                    País
+                </label>
+
+                <select
+                    id="perfilPais"
+                    required
+                >
+
+                    <option value="">
+                        Selecciona tu país
+                    </option>
+
+                    <option value="México">
+                        México
+                    </option>
+
+                    <option value="Argentina">
+                        Argentina
+                    </option>
+
+                    <option value="Colombia">
+                        Colombia
+                    </option>
+
+                    <option value="Chile">
+                        Chile
+                    </option>
+
+                    <option value="Perú">
+                        Perú
+                    </option>
+
+                    <option value="España">
+                        España
+                    </option>
+
+                    <option value="Estados Unidos">
+                        Estados Unidos
+                    </option>
+
+                    <option value="Otro">
+                        Otro
+                    </option>
+
+                </select>
+
+
+                <label for="perfilDescripcion">
+                    Sobre mí
+                </label>
+
+                <textarea
+                    id="perfilDescripcion"
+                    placeholder="Cuéntanos un poco sobre ti..."
+                    rows="4"
+                ></textarea>
+
+
+                <button type="submit">
+                    Guardar perfil
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 4. PÁGINA PRINCIPAL -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaInicio"
+        class="pantalla"
+        hidden
+    >
+
+        <div class="portada-inicio">
+
+            <p class="subtitulo">
+                BIENVENIDO A TU ESTUDIO DE ARTE
+            </p>
+
+            <h2>
+                ¡Hola,
+                <span id="nombreUsuario">artista</span>!
+            </h2>
+
+            <p>
+                Explora nuestras categorías y convierte
+                tus ideas en increíbles dibujos digitales.
+            </p>
+
+
+            <button
+                type="button"
+                data-page="categorias"
+            >
+                Explorar categorías
+            </button>
+
+        </div>
+
+
+        <!-- CATEGORÍAS DESTACADAS -->
+
+        <div class="seccion-categorias">
+
+            <h2>
+                Explora nuestras categorías
+            </h2>
+
+
+            <div class="contenedor-categorias">
+
+
+                <article class="tarjeta-categoria">
+
+                    <img
+                        src="img/anime.jpg"
+                        alt="Ilustraciones de anime"
+                    >
+
+                    <h3>Anime</h3>
+
+                    <p>
+                        Personajes y estilos del mundo del anime.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-category="Anime"
+                    >
+                        Explorar
+                    </button>
+
+                </article>
+
+
+                <article class="tarjeta-categoria">
+
+                    <img
+                        src="img/fandoms.jpg"
+                        alt="Ilustraciones de fandoms"
+                    >
+
+                    <h3>Fandoms</h3>
+
+                    <p>
+                        Personajes de tus series y universos favoritos.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-category="Fandoms"
+                    >
+                        Explorar
+                    </button>
+
+                </article>
+
+
+                <article class="tarjeta-categoria">
+
+                    <img
+                        src="img/retratos.jpg"
+                        alt="Retratos artísticos"
+                    >
+
+                    <h3>
+                        Retratos de personas
+                    </h3>
+
+                    <p>
+                        Retratos personalizados a partir de fotografías.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-category="Retratos de personas"
+                    >
+                        Explorar
+                    </button>
+
+                </article>
+
+
+                <article class="tarjeta-categoria">
+
+                    <img
+                        src="img/paisajes.jpg"
+                        alt="Ilustraciones de paisajes"
+                    >
+
+                    <h3>Paisajes</h3>
+
+                    <p>
+                        Lugares, escenarios y ambientes especiales.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-category="Paisajes"
+                    >
+                        Explorar
+                    </button>
+
+                </article>
+
+
+                <article class="tarjeta-categoria">
+
+                    <img
+                        src="img/mascotas.jpg"
+                        alt="Ilustraciones de mascotas"
+                    >
+
+                    <h3>Mascotas</h3>
+
+                    <p>
+                        Retratos ilustrados de tus compañeros animales.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-category="Mascotas"
+                    >
+                        Explorar
+                    </button>
+
+                </article>
+
+
+                <article class="tarjeta-categoria">
+
+                    <img
+                        src="img/personajes-originales.jpg"
+                        alt="Personajes originales"
+                    >
+
+                    <h3>
+                        Personajes originales
+                    </h3>
+
+                    <p>
+                        Diseños únicos creados a partir de tus ideas.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-category="Personajes originales"
+                    >
+                        Explorar
+                    </button>
+
+                </article>
+
+
+                <article class="tarjeta-categoria">
+
+                    <img
+                        src="img/tu-idea.jpg"
+                        alt="Creación de ideas personalizadas"
+                    >
+
+                    <h3>
+                        Tu propia idea
+                    </h3>
+
+                    <p>
+                        Describe cualquier idea que quieras convertir en dibujo.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-category="Tu propia idea"
+                    >
+                        Explorar
+                    </button>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 5. CATÁLOGO DE CATEGORÍAS -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaCategorias"
+        class="pantalla"
+        hidden
+    >
+
+        <h2>
+            Todas las categorías
+        </h2>
+
+        <p>
+            Elige el tipo de dibujo que deseas solicitar.
+        </p>
+
+
+        <div class="contenedor-categorias">
+
+            <button type="button" data-category="Anime">
+                Anime
+            </button>
+
+            <button type="button" data-category="Fandoms">
+                Fandoms
+            </button>
+
+            <button
+                type="button"
+                data-category="Retratos de personas"
+            >
+                Retratos de personas
+            </button>
+
+            <button type="button" data-category="Paisajes">
+                Paisajes
+            </button>
+
+            <button type="button" data-category="Mascotas">
+                Mascotas
+            </button>
+
+            <button
+                type="button"
+                data-category="Personajes originales"
+            >
+                Personajes originales
+            </button>
+
+            <button
+                type="button"
+                data-category="Tu propia idea"
+            >
+                Tu propia idea
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 6. FORMULARIO DE SOLICITUD -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaSolicitud"
+        class="pantalla"
+        hidden
+    >
+
+        <div class="formulario-contenedor">
+
+            <h2>Solicitar un dibujo</h2>
+
+            <p>
+                Cuéntanos cómo imaginas tu ilustración.
+                ¡Queremos conocer tu idea!
+            </p>
+
+
+            <form id="formSolicitud">
+
+
+                <label for="solicitudCategoria">
+                    Categoría
+                </label>
+
+                <select
+                    id="solicitudCategoria"
+                    required
+                >
+
+                    <option value="">
+                        Selecciona una categoría
+                    </option>
+
+                    <option value="Anime">
+                        Anime
+                    </option>
+
+                    <option value="Fandoms">
+                        Fandoms
+                    </option>
+
+                    <option value="Retratos de personas">
+                        Retratos de personas
+                    </option>
+
+                    <option value="Paisajes">
+                        Paisajes
+                    </option>
+
+                    <option value="Mascotas">
+                        Mascotas
+                    </option>
+
+                    <option value="Personajes originales">
+                        Personajes originales
+                    </option>
+
+                    <option value="Tu propia idea">
+                        Tu propia idea
+                    </option>
+
+                </select>
+
+
+                <label for="solicitudTitulo">
+                    Título de tu solicitud
+                </label>
+
+                <input
+                    type="text"
+                    id="solicitudTitulo"
+                    placeholder="Ejemplo: Mi personaje favorito"
+                    required
+                >
+
+
+                <label for="solicitudDescripcion">
+                    Describe tu dibujo
+                </label>
+
+                <textarea
+                    id="solicitudDescripcion"
+                    placeholder="Describe los personajes, poses, colores, fondo y detalles que deseas..."
+                    rows="6"
+                    required
+                ></textarea>
+
+
+                <label for="imagenReferencia">
+                    Imagen de referencia
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenReferencia"
+                    accept="image/png,image/jpeg,image/webp"
+                >
+
+
+                <div class="vista-referencia">
+
+                    <img
+                        id="vistaImagenReferencia"
+                        src=""
+                        alt="Vista previa de la imagen de referencia"
+                        hidden
+                    >
+
+                </div>
+
+
+                <label>
+                    Estilo del dibujo
+                </label>
+
+
+                <div class="opciones-estilo">
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="estiloDibujo"
+                            value="A color"
+                            required
+                        >
+
+                        A color
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="estiloDibujo"
+                            value="Blanco y negro"
+                        >
+
+                        Blanco y negro
+
+                    </label>
+
+
+                </div>
+
+
+                <button type="submit">
+                    Enviar solicitud
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 7. MIS SOLICITUDES -->
+    <!-- Pantalla interna del cliente -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaSolicitudes"
+        class="pantalla"
+        hidden
+    >
+
+        <h2>Mis solicitudes</h2>
+
+        <p>
+            Aquí podrás consultar el estado de tus dibujos solicitados.
+        </p>
+
+
+        <div
+            id="listaSolicitudes"
+            class="lista-solicitudes"
+        >
+
+            <div class="mensaje-vacio">
+
+                <h3>
+                    Aún no tienes solicitudes
+                </h3>
+
+                <p>
+                    Cuando envíes una solicitud aparecerá aquí.
+                </p>
+
+
+                <button
+                    type="button"
+                    data-page="categorias"
+                >
+                    Solicitar un dibujo
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 8. DETALLES Y SEGUIMIENTO -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaSeguimiento"
+        class="pantalla"
+        hidden
+    >
+
+        <h2>Seguimiento de mi dibujo</h2>
+
+        <div id="detalleSeguimiento">
+
+            <p>
+                Selecciona una solicitud para consultar sus detalles.
+            </p>
+
+            <p>
+                <strong>Estado:</strong>
+                <span id="estadoDibujo">
+                    Pendiente
+                </span>
+            </p>
+
+            <p>
+                <strong>Fecha de solicitud:</strong>
+                <span id="fechaSolicitud">
+                    Por determinar
+                </span>
+            </p>
+
+            <p>
+                <strong>Fecha estimada de entrega:</strong>
+                <span id="fechaEntrega">
+                    Pendiente
+                </span>
+            </p>
+
+            <p>
+                <strong>Mensaje de la artista:</strong>
+            </p>
+
+            <p id="mensajeArtista">
+                Todavía no hay mensajes.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 9. NOTIFICACIONES -->
+    <!-- Solo para la artista en el menú -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaNotificaciones"
+        class="pantalla"
+        hidden
+    >
+
+        <h2>Notificaciones</h2>
+
+        <p>
+            Consulta las novedades de las solicitudes.
+        </p>
+
+        <div id="listaNotificaciones">
+
+            <p>
+                No tienes notificaciones nuevas.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 10. PANEL PRIVADO DE LA ARTISTA -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaAdmin"
+        class="pantalla"
+        hidden
+    >
+
+        <div class="panel-artista">
+
+            <h2>
+                Panel privado de Andyartis
+            </h2>
+
+            <p>
+                Administración de solicitudes de dibujos.
+            </p>
+
+
+            <div class="resumen-admin">
+
+
+                <article>
+
+                    <h3 id="totalSolicitudes">
+                        0
+                    </h3>
+
+                    <p>
+                        Solicitudes recibidas
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3 id="solicitudesPendientes">
+                        0
+                    </h3>
+
+                    <p>
+                        Pendientes
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3 id="solicitudesAceptadas">
+                        0
+                    </h3>
+
+                    <p>
+                        Aceptadas
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3 id="solicitudesTerminadas">
+                        0
+                    </h3>
+
+                    <p>
+                        Terminadas
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+            <h3>
+                Solicitudes de clientes
+            </h3>
+
+
+            <div id="listaAdminSolicitudes">
+
+                <p>
+                    Las solicitudes recibidas aparecerán aquí.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 11. ADMINISTRAR SOLICITUD -->
+    <!-- Solo para la artista -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaAdministrarSolicitud"
+        class="pantalla"
+        hidden
+    >
+
+        <div class="formulario-contenedor">
+
+            <h2>
+                Administrar solicitud
+            </h2>
+
+
+            <div id="datosSolicitudAdmin">
+
+                <p>
+                    Selecciona una solicitud desde el panel privado.
+                </p>
+
+            </div>
+
+
+            <form id="formAdministrarSolicitud">
+
+
+                <label for="adminEstado">
+                    Estado de la solicitud
+                </label>
+
+                <select
+                    id="adminEstado"
+                    required
+                >
+
+                    <option value="Pendiente">
+                        Pendiente
+                    </option>
+
+                    <option value="Aceptada">
+                        Aceptada
+                    </option>
+
+                    <option value="En proceso">
+                        En proceso
+                    </option>
+
+                    <option value="Terminada">
+                        Terminada
+                    </option>
+
+                    <option value="Rechazada">
+                        Rechazada
+                    </option>
+
+                </select>
+
+
+                <label for="adminFechaEntrega">
+                    Fecha estimada de entrega
+                </label>
+
+                <input
+                    type="date"
+                    id="adminFechaEntrega"
+                >
+
+
+                <label for="adminMensaje">
+                    Mensaje para el cliente
+                </label>
+
+                <textarea
+                    id="adminMensaje"
+                    placeholder="Escribe un mensaje para el cliente..."
+                    rows="4"
+                ></textarea>
+
+
+                <button type="submit">
+                    Guardar cambios
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 12. CONFIGURACIÓN -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaConfiguracion"
+        class="pantalla"
+        hidden
+    >
+
+        <h2>Configuración</h2>
+
+
+        <div class="opciones-configuracion">
+
+
+            <div>
+
+                <h3>Apariencia</h3>
+
+                <p>
+                    Personaliza la apariencia de Andyartis.
+                </p>
+
+                <button
+                    type="button"
+                    id="btnCambiarTema"
+                >
+                    Cambiar modo claro u oscuro
+                </button>
+
+            </div>
+
+
+            <div>
+
+                <h3>Mi cuenta</h3>
+
+                <p>
+                    Administra tu información personal.
+                </p>
+
+                <button
+                    type="button"
+                    data-page="perfil"
+                >
+                    Editar mi perfil
+                </button>
+
+            </div>
+
+
+            <div>
+
+                <h3>Privacidad</h3>
+
+                <p>
+                    Consulta las opciones de privacidad de tu cuenta.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- 13. RECUPERAR CONTRASEÑA -->
+    <!-- ================================= -->
+
+    <section
+        id="pantallaRecuperar"
+        class="pantalla"
+        hidden
+    >
+
+        <div class="formulario-contenedor">
+
+            <h2>
+                Recuperar contraseña
+            </h2>
+
+            <p>
+                Escribe tu correo electrónico para solicitar
+                un enlace de recuperación.
+            </p>
+
+
+            <form id="formRecuperar">
+
+
+                <label for="recuperarCorreo">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="recuperarCorreo"
+                    placeholder="Ingresa tu correo"
+                    required
+                >
+
+
+                <button type="submit">
+                    Enviar solicitud
+                </button>
+
+            </form>
+
+
+            <button
+                type="button"
+                data-page="bienvenida"
+            >
+                Volver al inicio de sesión
+            </button>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- ================================= -->
+<!-- PIE DE PÁGINA -->
+<!-- ================================= -->
+
+<footer
+    class="pie-pagina"
+    id="piePagina"
+>
+
+    <div class="logo-footer">
+
+        <img
+            src="img/logo.jpg"
+            alt="Andyartis"
+        >
+
+        <h2>
+            Andyartis
+        </h2>
+
+    </div>
+
+
+    <p>
+        Un espacio donde la imaginación se convierte en arte.
+    </p>
+
+
+    <p>
+        © 2026 Andyartis. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+<!-- ================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================= -->
+
+<script src="js/app.js"></script>
+
+</body></html>
